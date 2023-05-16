@@ -13,7 +13,7 @@ choose = int(input())
 if choose == 1:
     #make instance of class Recognizer, which helps to convert speech to text
     recognizer=sr.Recognizer()
-    print(""""
+    print("""
     1.choose a path
     2.record an audio
     """)
@@ -27,7 +27,7 @@ if choose == 1:
             with sr.AudioFile(filepath) as sourse:
                 #listen the data
                 audio = recognizer.record(sourse)
-                text=recognizer.recognize_google(audio)
+                text = recognizer.recognize_google(audio)
                 print(text)
     elif number == 2:
         with sr.Microphone() as source:
